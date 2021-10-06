@@ -159,6 +159,8 @@ body {
 .story__picture {
   background-color: #aaa;
   grid-column: full-start/col-end 4;
+  display: -ms-grid;
+  display: grid;
 }
 
 .story__content {

@@ -2,6 +2,10 @@
   &__picture{
     background-color:$color-grey-light-2;
     grid-column: full-start/col-end 4;
+
+    display: grid;
+
+
   }
 
   &__content{
@@ -9,12 +13,6 @@
   
     padding: 6rem 12rem;
 
-
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: flex-start;
-  
     display: grid;
     align-content: center;
     justify-items: start;
