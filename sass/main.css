@@ -36,6 +36,12 @@ body {
   font-weight: 400px;
 }
 
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1;
+}
+
 .heading-2 {
   font-size: 4rem;
   font-style: italic;
@@ -142,13 +148,110 @@ body {
 }
 
 .header {
-  background-color: #aaa;
   grid-column: full-start/col-end 6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 29, 44, 0.93)), to(rgba(16, 29, 44, 0.93))), url(../img/back.jpg);
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/back.jpg);
+  padding: 8rem;
+  padding-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr min-content 6rem 1fr;
+      grid-template-rows: 1fr -webkit-min-content 6rem 1fr;
+      grid-template-rows: 1fr min-content 6rem 1fr;
+  -ms-grid-columns: max-content;
+      grid-template-columns: -webkit-max-content;
+      grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.realtors {
-  background-color: #b28451;
+.header__logo {
+  height: 3rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.header__seeon-text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr max-content 1fr;
+      grid-template-columns: 1fr -webkit-max-content 1fr;
+      grid-template-columns: 1fr max-content 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  color: #aaa;
+}
+
+.header__seeon-text::before, .header__seeon-text::after {
+  content: "";
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+}
+
+.header__btn {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.header__seeon-logo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  justify-items: center;
+}
+
+.header__seeon-logo img {
+  height: 2.5rem;
+}
+
+.realtor {
+  background-color: #101d2c;
   grid-column: col-start 7/full-end;
+  padding: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-row-gap: 2rem;
+}
+
+.realtor__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content max-content;
+      grid-template-columns: -webkit-min-content -webkit-max-content;
+      grid-template-columns: min-content max-content;
+  grid-column-gap: 2rem;
+  grid-row-gap: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.realtor__img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+}
+
+.realtor__sold {
+  text-transform: uppercase;
+  margin-top: -3px;
+  color: #aaa;
 }
 
 .features {
